@@ -72,9 +72,9 @@ if ($conn->query($sql) === TRUE) { //Modify to write error to error log file.
 }
 
 $conn->close();
-setcookie("fname", $name1, time() + 3600);
-setcookie("lname", $name2, time() + 3600);
-setcookie("attending", $attending_int, time() + 3600);
+setcookie("fname", $name1, time() + 2.419e+6);
+setcookie("lname", $name2, time() + 2.419e+6);
+setcookie("attending", $attending_int, time() + 2.419e+6);
 if($success) {
 	header('Location: rsvp.php?complete=1');
 } else {

@@ -2,7 +2,7 @@
 1) Fix sharer... potentially using FBML
 2) fix delay in email validation
 3) add border to images
-4) Extend cookie expiration
+4) Extend cookie expiration (x)
 5) Draw attention to warning in rsvp
 6) Better validate email (prevent submit)
 
