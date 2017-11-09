@@ -1,0 +1,389 @@
+body {
+	background: #bdc3c7;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #7B8F9F, #F1F7F7);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #7B8F9F, #F1F7F7) fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: anothertypewriter;
+	margin: 0;
+}
+@font-face {
+	font-family: anothertypewriter;
+	src: url("atwriter.ttf");
+}
+@font-face {
+	font-family: shorelines_script_bold;
+	src: url("shorelines_script_bold.otf");
+}
+h1, p, .cent {
+	text-align: center;
+	color: rgb(159,184,205);
+}
+h1 {
+	font: bold;
+}
+p {
+	opacity: 1;
+}
+
+.central {
+	text-align: center;
+}
+
+.head {}
+
+.main {}
+
+#error {
+		background-color: rgba(255, 0, 0, 0.7);
+		border: 2px solid red; 
+		padding: 3px;
+		text-align: center;
+}
+
+#foot p {
+	z-index: 1;
+	margin:auto; /* Required */
+	position:fixed; /* Required */
+	bottom:0; /* Aligns at the bottom */
+	right: 20px;
+	color: #6666;
+	opacity: 90%;
+}
+#footContact h6 {
+	z-index: 1;
+	margin:auto; /* Required */
+	position:fixed; /* Required */
+	bottom:0; /* Aligns at the bottom */
+	left: 20px;
+	color: #6666;
+	opacity: 90%;
+	font-size: 65%;
+}
+
+#footimg {
+	z-index: 0;
+	margin:0 auto; /* Required */
+	position:fixed; /* Required */
+	bottom:0; /* Aligns at the bottom */
+	left:0;right:0; /* Aligns horizontal center */
+	max-height:100%;
+	max-width:100%;
+	width: 100%;
+	opacity: 0.9;
+}
+
+.container{	
+	/* Rounded corners */
+	-moz-border-radius:20px;
+	-khtml-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius:20px;
+}
+
+#main {
+	position:relative;
+	z-index:2;
+	background: rgba(120,120,120,0.3);
+	width: 500px;
+	margin: 50px auto 0 auto; /*top, bottom, hight, width?!*/
+	padding: 0 60px 30px 60px;
+	border: solid 2px #cbcbcb;
+	/*background: #fafafa;*/
+	-moz-box-shadow: 0px 0px 10px #cbcbcb;
+	-webkit-box-shadow: 0px 0px 10px #cbcbcb;
+	box-shadow: 0px 0px 10px #cbcbcb;
+}
+
+#main p {
+	filter: brightness(55%);
+}
+
+img#mainimg {
+	z-index:inherit;
+	height: 300px;
+	width: 300px;
+	display: block;
+    margin: auto;
+	opacity:1;
+	border: solid 1px black;
+	-moz-box-shadow: 5px 5px 0px #999;
+	-webkit-box-shadow: 5px 5px 0px #999;
+	box-shadow: 5px 5px 0px #999;
+}
+
+#head {
+	position:relative;
+	z-index:2;
+	background: rgba(120,120,120,0.3);
+	width: 800px;
+	margin: 30px auto 0 auto; /*top, bottom, hight, width?!*/
+	padding: 0 60px 30px 60px;
+	border: solid 1px #cbcbcb;
+	/*background: #fafafa;*/
+	-moz-box-shadow: 0px 0px 10px #cbcbcb;
+	-webkit-box-shadow: 0px 0px 10px #cbcbcb;
+}
+
+#contextmen {
+	width: 100%;
+	border-collapse: collapse;
+	position: relative;
+	top: -70%;
+	transform: translateY(70%);
+}
+/*a:link, a:hover, a:active { color: black; }*/
+a { color: inherit; } 
+a:hover {
+	filter: brightness(40%);
+}
+#mainCen {
+	position: relative;
+	margin: 50px auto 0 auto; /*top, bottom, hight, width?!*/
+	padding: 0 60px 30px 60px;
+}
+#tabLeft {
+	padding: 0 60px 30px 60px;
+	font-family: shorelines_script_bold;
+	font-weight:bold;
+	font-size: 30px;
+	color: rgb(159,184,205);
+	filter: brightness(65%);
+	z-index: 2;
+}
+#tabRight {
+	padding: 0 60px 30px 60px;
+}
+
+
+ /* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(120,120,120,0.3);
+    z-index: 1;
+	-moz-border-radius:20px;
+	-khtml-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius:20px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	/*background-color: #f1f1f1;*/
+	filter: brightness(40%);
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+/*RSVP FORM*/
+.form-style-1 {
+    margin:10px auto;
+    max-width: 400px;
+    padding: 20px 12px 10px 20px;
+    font: 13px;
+	text-align: left !important;
+}
+.form-style-1 li {
+    padding: 0;
+    display: block;
+    list-style: none;
+    margin: 10px 0 0 0;
+}
+.form-style-1 label{
+    margin:0 0 3px 0;
+    padding:0px;
+    display:block;
+    font-weight: bold;
+	color: rgb(159,184,205);
+	filter: brightness(65%);
+}
+.form-style-1 input[type=text],
+.form-style-1 input[type=date],
+.form-style-1 input[type=datetime],
+.form-style-1 input[type=number],
+.form-style-1 input[type=search],
+.form-style-1 input[type=time],
+.form-style-1 input[type=url],
+.form-style-1 input[type=email],
+textarea,
+select{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border:1px solid #BEBEBE;
+    padding: 7px;
+    margin:0px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none; 
+}
+.form-style-1 input[type=text]:focus,
+.form-style-1 input[type=date]:focus,
+.form-style-1 input[type=datetime]:focus,
+.form-style-1 input[type=number]:focus,
+.form-style-1 input[type=search]:focus,
+.form-style-1 input[type=time]:focus,
+.form-style-1 input[type=url]:focus,
+.form-style-1 input[type=email]:focus,
+.form-style-1 textarea:focus,
+.form-style-1 select:focus{
+    -moz-box-shadow: 0 0 8px #88D5E9;
+    -webkit-box-shadow: 0 0 8px #88D5E9;
+    box-shadow: 0 0 8px #88D5E9;
+    border: 1px solid #88D5E9;
+}
+.form-style-1 .field-divided{
+    width: 49%;
+	display:inline-block;
+}
+
+.form-style-1 .field-long{
+    width: 100%;
+}
+.form-style-1 .field-select{
+    width: 100%;
+}
+.form-style-1 .field-textarea{
+    height: 100px;
+}
+.form-style-1 input[type=submit], .form-style-1 input[type=button]{
+    background: #4B99AD;
+    padding: 8px 15px 8px 15px;
+    border: none;
+    color: #fff;
+}
+.form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover{
+    background: #4691A4;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.form-style-1 .required{
+    color:red;
+}
+
+.hideguest {
+	display: none !important;
+}
+.showguest {
+	display: block !important;
+}
+
+/*Share*/
+.share {
+	width: 70px;
+	height: 100px;
+	display: block;
+	/*text-indent: -99999px;*/
+	outline: medium none;
+	position: absolute;
+	top: 50px;
+	left: 0px;
+}
+.shareout {
+	width: 70px;
+	height: 100px;
+	display: block;
+	/*text-indent: -99999px;*/
+	outline: medium none;
+	position: absolute;
+	top: 50px;
+	left: 60px;
+}
+.shareContentHide {
+	display: none !important;
+	width: 70px;
+	height: 100px;
+	display: block;
+	/*text-indent: -99999px;*/
+	outline: medium none;
+	position: absolute;
+	top: 50px;
+	left: 0px;
+}
+.shareContentShow {
+	display: block !important;
+	width: 70px;
+	height: 100px;
+	display: block;
+	/*text-indent: -99999px;*/
+	outline: medium none;
+	position: absolute;
+	top: 50px;
+	left: 0px;
+}
+
+.required {
+	all: revert;
+	color: #ff0000 !important;
+	
+}
+
+
+/*Countdown clock*/
+
+#clockdiv{
+	color: black;
+	bottom: 20px;
+	font-weight: 100;
+	text-align: center;
+	font-size: 10px;
+	/*margin: 0 auto;*/
+	left:0;
+	position:fixed;
+	z-index:8;
+	opacity: 0.7;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	/*background: linear-gradient(to top, #7B8F9F, #F1F7F7) fixed;*/
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: linear-gradient(to top, #F1F7F7, #7B8F9F);
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}

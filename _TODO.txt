@@ -1,0 +1,15 @@
+-> 0.1.1 
+1) Fix sharer... potentially using FBML
+2) fix delay in email validation
+3) add border to images
+4) Extend cookie expiration
+5) Draw attention to warning in rsvp
+6) Better validate email (prevent submit)
+
+-> 1.0.0 Convert SQL to prepared statements.
+	Update success.php to functions
+	look into php sessions instead of just cookies
+	Check for cookies before setting new ones.
+	Add Google Analytics
+
+kG@8x$?yS-g;CtBY
