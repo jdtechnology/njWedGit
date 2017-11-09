@@ -43,7 +43,7 @@ if(isset($_COOKIE['fname']) && isset($_COOKIE['lname']) && isset($_COOKIE["atten
 				<textarea name="additional" id="field5" class="field-long field-textarea"></textarea>
 			</li>
 			<li>
-				<input type="submit" value="Submit" />
+				<input id="rsvp_submit" type="submit" value="Submit" />
 			</li>
 		</ul>
 	</form>

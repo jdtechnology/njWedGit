@@ -5,6 +5,7 @@
 4) Extend cookie expiration (x)
 5) Draw attention to warning in rsvp
 6) Better validate email (prevent submit)
+7) Move nav bar to top-touch
 
 -> 1.0.0 Convert SQL to prepared statements.
 	Update success.php to functions

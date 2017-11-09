@@ -55,8 +55,10 @@ jd.funcs = {
 		}
 	},
 	validateEmail: function() {
+		var emailad = document.getElementById("email1");
+		var emailaddr = emailad.value;
 		var rsvpform = document.forms.rsvp; // Or document.forms['login']
-		var emailaddr = rsvpform.elements.email.value;
+		//var emailaddr = rsvpform.elements.email.value;
 		//var isTaken = 0;
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
@@ -67,10 +69,13 @@ jd.funcs = {
 		xhttp.open("GET", "check_email.php?email="+emailaddr, true);
 		xhttp.send();
 		if (jd.vars.isTaken > 0) {
-		jd.funcs.errorMessage("This email address is already in use. Please enter a different email", "emailinuse");
-		rsvpform.elements.email.focus();
-		return false;
+			jd.funcs.errorMessage("This email address is already in use. Please enter a different email", "emailinuse");
+			document.getElementById("email1").focus();
+			//rsvpform.elements.email.focus();
+			document.getElementById("rsvp_submit").disabled = true;
+			return false;
 		} else {
+			document.getElementById("rsvp_submit").disabled = false;
 			return true;
 		}
 	},
@@ -84,7 +89,7 @@ jd.funcs = {
 					document.getElementById("shareContent").classList.toggle("shareContentShow");
 				}
 			}
-		}
+		};
 		document.getElementById("shareContent"). innerHTML = jd.vars.twitterShare + "\n" + jd.vars.facebookShare;
 		twittr();
 	},
@@ -115,7 +120,7 @@ jd.funcs = {
 					}
 				}
 			}
-		}
+		};
 	}
 };
 
@@ -214,12 +219,12 @@ var funcCalled = 0;
 (function () {
 	if (document.addEventListener) {
 		document.addEventListener("DOMContentLoaded", function () {
-			jd.init()
-		}, !1)
+			jd.init();
+		}, !1);
 	} else {
 		if (document.all && !window.opera) {
 			document.write('<script type="text/javascript" id="contentLoadTest" defer="defer" src="javascript:void(0)"><\/script>'), document.getElementById("contentLoadTest").onreadystatechange = function () {
-				"complete" == this.readyState && jd.init()
+				"complete" == this.readyState && jd.init();
 			}
 		} else {
 			if (/Safari/i.test(navigator.userAgent)) {
@@ -228,7 +233,7 @@ var funcCalled = 0;
 				}, 10)
 			} else {
 			window.onload = function () {
-		setTimeout("if (!funcCalled) jd.init()", 0)
+		setTimeout("if (!funcCalled) jd.init()", 0);
 	};
 }
 		}
