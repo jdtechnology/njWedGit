@@ -66,7 +66,7 @@ jd.funcs = {
 				jd.vars.isTaken = this.responseText;
 			}
 		};
-		xhttp.open("GET", "check_email.php?email="+emailaddr, true);
+		xhttp.open("GET", "check_email.php?email="+emailaddr, false);
 		xhttp.send();
 		if (jd.vars.isTaken > 0) {
 			jd.funcs.errorMessage("This email address is already in use. Please enter a different email", "emailinuse");
