@@ -70,7 +70,8 @@ jd.funcs = {
 		xhttp.send();
 		if (jd.vars.isTaken > 0) {
 			jd.funcs.errorMessage("This email address is already in use. Please enter a different email", "emailinuse");
-			document.getElementById("email1").focus();
+			window.setTimeout(function () { document.getElementById('email1').focus(); }, 0); 
+			//document.getElementById("email1").focus();
 			//rsvpform.elements.email.focus();
 			document.getElementById("rsvp_submit").disabled = true;
 			return false;
