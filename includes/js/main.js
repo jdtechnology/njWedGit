@@ -12,8 +12,6 @@ jd.vars = {
 	rotateCount: 1,
 	rsvpError: false,
 	imageList: ["home_1.jpeg", "home_2.jpg", "home_4.jpg", "home_5.jpg"],
-	twitterShare: '<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Hello%20world" data-size="large">Tweet</a>',
-	facebookShare: '<div class="fb-share-button" data-href="http://natalieandjameswedding.co.uk/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnatalieandjameswedding.co.uk%2F&amp;src=sdkpreparse">Share</a></div>'
 };
 
 jd.temp = {
@@ -91,8 +89,6 @@ jd.funcs = {
 				}
 			}
 		};
-		document.getElementById("shareContent"). innerHTML = jd.vars.twitterShare + "\n" + jd.vars.facebookShare;
-		twittr();
 	},
 	newImg: function() {
 		if(jd.vars.rotateCount >= jd.vars.imageList.length) {
@@ -151,25 +147,6 @@ jd.init = function() { //Modify to rediect to "app"
 	}
 	initializeClock('clockdiv', deadline);
 };
-
-/****************Twitter ************************/
-window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
-
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-}(document, "script", "twitter-wjs"));
-/** END **/
 
 /**Countdown clock temp**/
 function getTimeRemaining(endtime) {
