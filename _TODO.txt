@@ -1,16 +1,18 @@
 -> 0.1.1 
-1) Fix sharer... potentially using FBML
+1) Fix sharer... potentially using FBML (x)
 2) fix delay in email validation (x)
-3) add border to images
+3) Better validate email (prevent submit) (x)
 4) Extend cookie expiration (x)
-5) Draw attention to warning in rsvp
-6) Better validate email (prevent submit)
-7) Move nav bar to top-touch
 
 -> 1.0.0 Convert SQL to prepared statements.
 	Update success.php to functions
 	look into php sessions instead of just cookies
 	Check for cookies before setting new ones.
 	Add Google Analytics
+	Try to convert email validation to asynchronos again :(
+	add border to images
+	Move nav bar to top-touch
+	Remove comments
+	Make email and G+ buttons clickable
 
 kG@8x$?yS-g;CtBY
