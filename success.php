@@ -2,6 +2,18 @@
 require("config.php");
 // Create connection
 $conn = new mysqli(hostname, username, password, dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$gStmt = $conn->prepare("INSERT INTO guests (fname, lname, email, attending, additional)
+	VALUES(?, ?, ?, ?, ?)");
+$gStmt->bind_param("sssis", $name1, $name2, $email, $attending_int, $additional);
+$gStmtExtra = $conn->prepare("INSERT INTO guests (fname, lname, email, attending, additional, gfname, glname)
+	VALUES(?, ?, ?, ?, ?, ?, ?)");
+$gStmtExtra->bind_param("sssisss", $name1, $name2, $email, $attending_int, $additional, $gname1, $gname2);
+
 //$conn->real_escape_string
 $name1 = $_POST["firstname"];
 $name1 = $conn->real_escape_string($name1);
@@ -46,29 +58,25 @@ switch($attending) { //maybe update to arrays
 }
 $attending_int = intval($attending_int);
 
-//echo $name1 . "\n" . $name2 . "\n" . $email . "\n" . $attending . "\n" . $additional . "\n" . $attending_int;
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 if(!$g1) {
-	$sql = "INSERT INTO guests (fname, lname, email, attending, additional)
-	VALUES('$name1', '$name2', '$email', '$attending_int', '$additional')";
+	if($gStmt->execute()) {
+		$success = true;
+	} else {
+		$success = false;
+	}
 } else {
-	$sql = "INSERT INTO guests (fname, lname, email, attending, additional, gfname, glname)
-	VALUES('$name1', '$name2', '$email', '$attending_int', '$additional', '$gname1', '$gname2')";
+	if($gStmtExtra->execute()) {
+		$success = true;
+	} else {
+		$success = false;
+	}
 }
-if ($conn->query($sql) === TRUE) { //Modify to write error to error log file.
-    //echo "New record created successfully";
-	$success = true;
-} else {
-    //echo "Error: " . $sql . "<br>" . $conn->error;
-	$success = false;
-}
-
+$gStmt->close();
+$gStmtExtra->close();
 $conn->close();
+
+
 setcookie("fname", $name1, time() + 2.419e+6);
 setcookie("lname", $name2, time() + 2.419e+6);
 setcookie("attending", $attending_int, time() + 2.419e+6);
