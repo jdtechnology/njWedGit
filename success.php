@@ -1,10 +1,7 @@
 <?php
-$hostname = "localhost";
-$username = "root";
-$password = "";
-$dbname = "rsvp_1";
+require("config.php");
 // Create connection
-$conn = new mysqli($hostname, $username, $password, $dbname);
+$conn = new mysqli(hostname, username, password, dbname);
 //$conn->real_escape_string
 $name1 = $_REQUEST["firstname"];
 $name1 = $conn->real_escape_string($name1);
@@ -49,7 +46,7 @@ switch($attending) { //maybe update to arrays
 }
 $attending_int = intval($attending_int);
 
-echo $name1 . "\n" . $name2 . "\n" . $email . "\n" . $attending . "\n" . $additional . "\n" . $attending_int;;
+//echo $name1 . "\n" . $name2 . "\n" . $email . "\n" . $attending . "\n" . $additional . "\n" . $attending_int;
 
 // Check connection
 if ($conn->connect_error) {

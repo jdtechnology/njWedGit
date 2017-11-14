@@ -1,10 +1,7 @@
  <?php
-$hostname = "localhost";
-$username = "root";
-$password = "";
-$dbname = "rsvp_1";
+require("config.php");
 // Create connection
-$conn = new mysqli($hostname, $username, $password, $dbname);
+$conn = new mysqli(hostname, username, password, dbname);
 $isTaken = 0;
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -15,7 +12,7 @@ if(isset($_GET['email'])){
 	if ($result = $conn->query($sql)) {
 		//echo "Query successful";
 	} else {
-		echo "Error: " . $sql . "<br>" . $conn->error;
+		//echo "Error: " . $sql . "<br>" . $conn->error;
 	}
 	$isTaken = $result->num_rows;
 }
