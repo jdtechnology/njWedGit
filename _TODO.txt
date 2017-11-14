@@ -4,15 +4,22 @@
 3) Better validate email (prevent submit) (x)
 4) Extend cookie expiration (x)
 
--> 1.0.0 Convert SQL to prepared statements.
+-> 1.0.0 
+	Convert SQL to prepared statements.
+	Add error handling to SQL
 	Update success.php to functions
+	Move db info to config.php (x)
+	Convert $_REQUEST into $_GET/$_POST 
 	look into php sessions instead of just cookies
 	Check for cookies before setting new ones.
 	Add Google Analytics
-	Try to convert email validation to asynchronos again :(
+	Try to convert email validation to asynchronos again :( (x)
 	add border to images
 	Move nav bar to top-touch
 	Remove comments
 	Make email and G+ buttons clickable
+	Add current page url to share buttons
+	post data to check_email.php instead of get
+	Uncomment htaccess rewrite
 
 kG@8x$?yS-g;CtBY

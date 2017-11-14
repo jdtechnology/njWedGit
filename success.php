@@ -81,7 +81,7 @@ setcookie("fname", $name1, time() + 2.419e+6);
 setcookie("lname", $name2, time() + 2.419e+6);
 setcookie("attending", $attending_int, time() + 2.419e+6);
 if($success) {
-	header('Location: rsvp.php?complete=1');
+	header('Location: redirect.php?urlfrom=rsvp');
 } else {
 	header('Location: rsvp.php?complete=0');
 }
