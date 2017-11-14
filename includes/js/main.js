@@ -62,21 +62,19 @@ jd.funcs = {
 		xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				jd.vars.isTaken = this.responseText;
+				if (jd.vars.isTaken > 0) {
+					jd.funcs.errorMessage("This email address is already in use. Please enter a different email", "emailinuse");
+					window.setTimeout(function () { document.getElementById('email1').focus(); }, 0); 
+					document.getElementById("rsvp_submit").disabled = true;
+				} else {
+					jd.funcs.clearMessageFeed();
+					document.getElementById("rsvp_submit").disabled = false;
+				}
 			}
 		};
-		xhttp.open("GET", "check_email.php?email="+emailaddr, false);
+		xhttp.open("GET", "check_email.php?email="+emailaddr, true);
 		xhttp.send();
-		if (jd.vars.isTaken > 0) {
-			jd.funcs.errorMessage("This email address is already in use. Please enter a different email", "emailinuse");
-			window.setTimeout(function () { document.getElementById('email1').focus(); }, 0); 
-			//document.getElementById("email1").focus();
-			//rsvpform.elements.email.focus();
-			document.getElementById("rsvp_submit").disabled = true;
-			return false;
-		} else {
-			document.getElementById("rsvp_submit").disabled = false;
-			return true;
-		}
+		
 	},
 	slideOut: function() {
 		document.getElementById("shareImg").classList.toggle("shareout");
