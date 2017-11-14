@@ -3,27 +3,27 @@ require("config.php");
 // Create connection
 $conn = new mysqli(hostname, username, password, dbname);
 //$conn->real_escape_string
-$name1 = $_REQUEST["firstname"];
+$name1 = $_POST["firstname"];
 $name1 = $conn->real_escape_string($name1);
-$name2 = $_REQUEST["lastname"];
+$name2 = $_POST["lastname"];
 $name2 = $conn->real_escape_string($name2);
-$email = $_REQUEST["email"];
+$email = $_POST["email"];
 $email = $conn->real_escape_string($email);
-$attending = $_REQUEST["attending"];
-$additional = $_REQUEST["additional"];
+$attending = $_POST["attending"];
+$additional = $_POST["additional"];
 $additional = $conn->real_escape_string($additional);
 $attending_int = 8;
 $success = false;
 
-if(isset($_REQUEST["gfirstname"])) {
+if(isset($_POST["gfirstname"])) {
 	$g1 = true;
-	$gname1 = $_REQUEST["gfirstname"];
+	$gname1 = $_POST["gfirstname"];
 	$gname1 = $conn->real_escape_string($gname1);
 } else {
 	$g1 = false;
 }
-if(isset($_REQUEST["glastname"])) {
-	$gname2 = $_REQUEST["glastname"];
+if(isset($_POST["glastname"])) {
+	$gname2 = $_POST["glastname"];
 	$gname2 = $conn->real_escape_string($gname2);
 }
 
