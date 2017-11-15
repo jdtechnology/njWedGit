@@ -5,13 +5,12 @@
 4) Extend cookie expiration (x)
 
 -> 1.0.0 
-	Convert SQL to prepared statements.
+	Convert SQL to prepared statements. (x)
 	Add error handling to SQL
 	Update success.php to functions
 	Move db info to config.php (x)
-	Convert $_REQUEST into $_GET/$_POST 
+	Convert $_REQUEST into $_GET/$_POST (x)
 	look into php sessions instead of just cookies
-	Check for cookies before setting new ones.
 	Add Google Analytics
 	Try to convert email validation to asynchronos again :( (x)
 	add border to images
