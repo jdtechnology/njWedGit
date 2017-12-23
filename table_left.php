@@ -80,8 +80,6 @@ if($page_ref == "home_page") {
 					<div id="microsoft_placehold2"></div>
 				</div>
 			</td>
-}
-?>
 <?php
 } else {
 	echo "FAILURE";
