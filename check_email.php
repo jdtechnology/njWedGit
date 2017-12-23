@@ -1,4 +1,4 @@
- <?php
+<?php
 require("config.php");
 // Create connection
 $conn = new mysqli(hostname, username, password, dbname);
