@@ -19,12 +19,12 @@
 	Make email and G+ buttons clickable
 	Add current page url to share buttons
 	post data to check_email.php instead of get
-	Uncomment htaccess rewrite
+	Uncomment htaccess rewrite (x)
 
 -> Sprint 1 (ONE)
 
 	Move Contact us to RSVP page
-	Remove Contact us (Chage to order of the day)
+	Remove Contact us (Chage to order of the day) (x)
 	Add gift list page
 
 	Move nav bar to top, make it dark and fill the page, and fixed pos

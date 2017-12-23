@@ -4,6 +4,7 @@
 	<table id="contextmen">
 		<tr>
 			<th><a class="ajax-nav" href="index">Home</a></th>
+			<th><a class="ajax-nav" href="ootd">Order of the Day</a></th>
 			<th>
 				<!--<div class="dropdown">-->
 				<a class="dropme ajax-nav" id="dropdown" href="location">Location</a>
@@ -13,9 +14,8 @@
 					  </div>
 					<!--</div> -->
 			</th>
+			<th><a class="ajax-nav" href="hotels">Where to stay</a></th>
 			<th><a class="ajax-nav" href="rsvp">RSVP</a></th>
-			<th><a class="ajax-nav" href="contact">Contact Us</a></th>
-			<th>Hotels</th>
 		</tr>
 	</table>
 </div>

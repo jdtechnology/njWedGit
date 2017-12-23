@@ -1,5 +1,5 @@
 
-<?php 
+<?php
 if($page_ref == "home_page") {
 ?>
 
@@ -46,7 +46,7 @@ if($page_ref == "home_page") {
 					<br>
 				</div>
 			</td>
-<?php 
+<?php
 } elseif($page_ref == "rsvp_page") {
 ?>
 <td id="tabLeft">
@@ -69,7 +69,19 @@ if($page_ref == "home_page") {
 					<div id="microsoft_placehold2"></div>
 				</div>
 			</td>
-
+<?php
+} elseif($page_ref == "ootd") {
+?>
+			<td id="tabLeft">
+				<div id="leftContent">
+					<!--OTHER-->
+					<div id="microsoft_placehold1"></div>
+					<p><span class="required">51</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id ante a magna ultricies sodales.</p>
+					<div id="microsoft_placehold2"></div>
+				</div>
+			</td>
+}
+?>
 <?php
 } else {
 	echo "FAILURE";
