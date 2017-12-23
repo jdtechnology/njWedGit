@@ -1,10 +1,10 @@
--> 0.1.1 
+-> 0.1.1
 1) Fix sharer... potentially using FBML (x)
 2) fix delay in email validation (x)
 3) Better validate email (prevent submit) (x)
 4) Extend cookie expiration (x)
 
--> 1.0.0 
+-> 1.0.0
 	Convert SQL to prepared statements. (x)
 	Add error handling to SQL
 	Update success.php to functions
@@ -20,5 +20,14 @@
 	Add current page url to share buttons
 	post data to check_email.php instead of get
 	Uncomment htaccess rewrite
+
+-> Sprint 1 (ONE)
+
+	Move Contact us to RSVP page
+	Remove Contact us (Chage to order of the day)
+	Add gift list page
+
+	Move nav bar to top, make it dark and fill the page, and fixed pos
+	Make general about liverpool location
 
 kG@8x$?yS-g;CtBY
