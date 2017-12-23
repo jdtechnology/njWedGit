@@ -119,7 +119,7 @@ jd.funcs = {
 	}
 };
 
-jd.cookies = { //ToDO
+jd.cookies = { //To DO
 };
 
 jd.init = function() { //Modify to rediect to "app"
