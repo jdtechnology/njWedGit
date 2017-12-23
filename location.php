@@ -1,5 +1,5 @@
 <?php
-$page_title = "Location TEXT SHIZ";
+$page_title = "Location";
 
 $as_json = false;
 if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
@@ -28,10 +28,10 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
 				$page_ref = "location_page";
 				require("table_left.php");
 			?>
-		
+
 			<td id="tabRight">
 				<div class="container" id="main">
-					<?php 
+					<?php
 						require("main_general.php");
 						echo "\n";
 					?>
