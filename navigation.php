@@ -1,4 +1,5 @@
 <?php require("share_tab.php"); ?>
+<div id="beta_message">This site is in a public beta... Please contact the <a href="mailto:admin@natalieandjameswedding.co.uk">admin@natalieandjameswedding.co.uk</a> if you notice an error</div>
 <div class="container" id="head">
 	<table id="contextmen">
 		<tr>

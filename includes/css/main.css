@@ -34,7 +34,7 @@ p {
 
 #error {
 		background-color: rgba(255, 0, 0, 0.7);
-		border: 2px solid red; 
+		border: 2px solid red;
 		padding: 3px;
 		text-align: center;
 }
@@ -71,7 +71,7 @@ p {
 	opacity: 0.9;
 }
 
-.container{	
+.container{
 	/* Rounded corners */
 	-moz-border-radius:20px;
 	-khtml-border-radius: 20px;
@@ -131,7 +131,7 @@ img#mainimg {
 	transform: translateY(70%);
 }
 /*a:link, a:hover, a:active { color: black; }*/
-a { color: inherit; } 
+a { color: inherit; }
 a:hover {
 	filter: brightness(40%);
 }
@@ -249,7 +249,7 @@ select{
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
-    outline: none; 
+    outline: none;
 }
 .form-style-1 input[type=text]:focus,
 .form-style-1 input[type=date]:focus,
@@ -350,7 +350,7 @@ select{
 .required {
 	all: revert;
 	color: #ff0000 !important;
-	
+
 }
 
 
@@ -568,4 +568,12 @@ background-color: #FF6600
 .resp-sharing-button--email:active {
   background-color: #5e5e5e;
   border-color: #5e5e5e;
+}
+/*Beta message*/
+#beta_message {
+	background-color: black;
+	color: green;
+	text-align: center;
+	left: 0;
+	right: 0;
 }
