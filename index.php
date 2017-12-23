@@ -1,5 +1,5 @@
 <?php
-$page_title = "HOMEPAGE TEXT SHIZ";
+$page_title = "Nat and James Wedding Home!";
 
 $as_json = false;
 if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
@@ -21,17 +21,17 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
 
 <div id="ajax-content">
 <?php } ?>
-	
+
 	<table id="mainCen">
 		<tr>
 			<?php
 				$page_ref = "home_page";
 				require("table_left.php");
 			?>
-		
+
 			<td id="tabRight">
 				<div class="container" id="main">
-					<?php 
+					<?php
 						require("main_general.php");
 						echo "\n";
 					?>
