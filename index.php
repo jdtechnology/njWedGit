@@ -35,9 +35,12 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
 						require("main_general.php");
 						echo "\n";
 					?>
-					<p><span class="required">1</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum turpis vel diam finibus, vel vehicula ligula aliquet. Vivamus vel risus aliquet, scelerisque ipsum id, hendrerit diam. Sed cursus, est sed efficitur aliquet, eros lacus mollis ligula, ac finibus ante justo vel turpis. Aenean ac neque sapien. Nulla non luctus massa, eget fermentum lacus.</p>
+					<!-- <p><span class="required">1</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum turpis vel diam finibus, vel vehicula ligula aliquet. Vivamus vel risus aliquet, scelerisque ipsum id, hendrerit diam. Sed cursus, est sed efficitur aliquet, eros lacus mollis ligula, ac finibus ante justo vel turpis. Aenean ac neque sapien. Nulla non luctus massa, eget fermentum lacus.</p> -->
+          <br>
+          <br>
+          <br>
 					<img class="central" id="mainimg" src="includes/images/home_1.jpeg" alt="Loading..."><!--Convert to png for continuity-->
-					<p><p><span class="required">2</span>Sed quis odio nec risus pellentesque bibendum id eget augue. Donec egestas a eros nec bibendum. Aliquam facilisis mattis metus, a lacinia quam venenatis eu. Duis dolor turpis, dictum in nisl nec, pulvinar semper sem. Vivamus quis auctor magna. Suspendisse dignissim suscipit pulvinar. Maecenas rhoncus lobortis consequat. Nam lorem elit, consequat eget quam vitae, ullamcorper ullamcorper diam. Etiam vitae erat sed tellus consectetur cursus vitae eu tortor. Suspendisse id arcu quis diam efficitur vulputate. Praesent eget enim fringilla, lobortis lacus eu, viverra neque.</p>
+					<p><!--<span class="required">2</span>-->Welcome to our wedding website! We hope you find this information helpful as you plan your trip to Liverpool. We are so excited to celebrate our big day with all of you!</p>
 				</div>
 			</td>
 		</tr>

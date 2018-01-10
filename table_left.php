@@ -5,7 +5,7 @@ if($page_ref == "home_page") {
 
 <td id="tabLeft">
 				<div id="leftContent">
-					<p><span class="required">11</span>Welcome to the online home of The Wedding of Natalie and James</p>
+					<p><!--<span class="required">11</span>-->Natalie and James' Wedding 21<sup>st</sup> April 2018</p>
 					<!--<br> is temporary fix-->
 					<br>
 					<br>
