@@ -9,8 +9,10 @@
 				<!--<div class="dropdown">-->
 				<a class="dropme ajax-nav" id="dropdown" href="information">Information</a>
 					  <div id="myDropdown" class="dropdown-content">
-						<a class="ajax-nav" href="day">Daytime</a>
-						<a class="ajax-nav" href="night">Nighttime</a>
+						<a class="ajax-nav" href="day">Ceremony (Daytime)</a>
+						<a class="ajax-nav" href="night">Reception (Nighttime)</a>
+						<a class="ajax-nav" href="wheretostay">Where to stay</a>
+						<a class="ajax-nav" href="liverpool">Liverpool</a>
 					  </div>
 					<!--</div> -->
 			</th>
