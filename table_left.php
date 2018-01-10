@@ -25,7 +25,7 @@ if($page_ref == "home_page") {
 			<td id="tabLeft">
 				<div id="leftContent">
 					<!--Location DAY-->
-					<p><span class="required">12</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id ante a magna ultricies sodales.</p>
+					<p><!--<span class="required">12</span>-->Ceremony at St Georges Hall</p>
 					<br>
 					<br>
 					<br>

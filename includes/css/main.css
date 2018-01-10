@@ -46,6 +46,10 @@ div#maps {
 		padding: 3px;
 		text-align: center;
 }
+#leftContent p {
+	color: #0000000;
+	filter: brightness(30%);
+}
 
 #foot p {
 	z-index: 1;
