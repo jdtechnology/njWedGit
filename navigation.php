@@ -7,14 +7,14 @@
 			<th><a class="ajax-nav" href="ootd">Order of the Day</a></th>
 			<th>
 				<!--<div class="dropdown">-->
-				<a class="dropme ajax-nav" id="dropdown" href="location">Location</a>
+				<a class="dropme ajax-nav" id="dropdown" href="information">Information</a>
 					  <div id="myDropdown" class="dropdown-content">
 						<a class="ajax-nav" href="day">Daytime</a>
 						<a class="ajax-nav" href="night">Nighttime</a>
 					  </div>
 					<!--</div> -->
 			</th>
-			<th><a class="ajax-nav" href="hotels">Where to stay</a></th>
+			<th><a class="ajax-nav" href="registry">Registry</a></th>
 			<th><a class="ajax-nav" href="rsvp">RSVP</a></th>
 		</tr>
 	</table>
