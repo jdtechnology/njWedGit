@@ -39,7 +39,7 @@ if($page_ref == "home_page") {
 			<td id="tabLeft">
 				<div id="leftContent">
 					<!--Location NIGHT-->
-					<p><span class="required">13</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id ante a magna ultricies sodales.</p>
+					<p><!--<span class="required">13</span>-->Reception at Oh Me Oh My</p>
 					<br>
 					<br>
 					<br>
