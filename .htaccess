@@ -1,5 +1,6 @@
-#RewriteEngine on
-#RewriteRule ^(.+)\.php$ /$1 [R,L]
-#RewriteCond %{REQUEST_FILENAME}.php -f
-#RewriteRule ^(.*?)/?$ /$1.php [NC,END]
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]
 #Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

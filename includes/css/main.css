@@ -169,6 +169,7 @@ a:hover {
 	color: rgb(159,184,205);
 	filter: brightness(65%);
 	z-index: 2;
+	vertical-align: middle;
 }
 #tabRight {
 	padding: 0 60px 30px 60px;

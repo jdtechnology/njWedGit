@@ -81,6 +81,17 @@ if($page_ref == "home_page") {
 				</div>
 			</td>
 <?php
+} elseif($page_ref == "registry_page") {
+?>
+				<td id="tabLeft">
+					<div id="leftContent">
+						<!--OTHER-->
+						<div id="microsoft_placehold1"></div>
+							<p>Registry by John Lewis</p>
+							<div id="microsoft_placehold2"></div>
+						</div>
+					</td>
+<?php
 } else {
 	echo "FAILURE";
 }
