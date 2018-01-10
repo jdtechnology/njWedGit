@@ -27,11 +27,19 @@ p {
 .central {
 	text-align: center;
 }
+.carpark {
+	color: rgb(159,184,205);
+	filter: brightness(55%);
+}
 
 .head {}
 
 .main {}
-
+div#maps {
+	/* align: center; */
+	left:0;
+	right:0;
+}
 #error {
 		background-color: rgba(255, 0, 0, 0.7);
 		border: 2px solid red;
