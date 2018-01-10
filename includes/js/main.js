@@ -1,6 +1,6 @@
 "use strict";
 (function () {
-	
+
 	window.jd = window.jd || {};
 }());
 
@@ -11,7 +11,7 @@ jd.vars = {
 	rotateInterval: 0,
 	rotateCount: 1,
 	rsvpError: false,
-	imageList: ["home_1.jpeg", "home_2.jpg", "home_4.jpg", "home_5.jpg"],
+	imageList: ["home_1.jpeg", "home_2.jpg", "home_4.jpg", "home_5.jpg"]
 };
 
 jd.temp = {
@@ -64,7 +64,7 @@ jd.funcs = {
 				jd.vars.isTaken = this.responseText;
 				if (jd.vars.isTaken > 0) {
 					jd.funcs.errorMessage("This email address is already in use. Please enter a different email", "emailinuse");
-					window.setTimeout(function () { document.getElementById('email1').focus(); }, 0); 
+					window.setTimeout(function () { document.getElementById('email1').focus(); }, 0);
 					document.getElementById("rsvp_submit").disabled = true;
 				} else {
 					jd.funcs.clearMessageFeed();
@@ -74,7 +74,7 @@ jd.funcs = {
 		};
 		xhttp.open("GET", "check_email.php?email="+emailaddr, true);
 		xhttp.send();
-		
+
 	},
 	slideOut: function() {
 		document.getElementById("shareImg").classList.toggle("shareout");
@@ -91,7 +91,7 @@ jd.funcs = {
 	newImg: function() {
 		if(jd.vars.rotateCount >= jd.vars.imageList.length) {
 			jd.vars.rotateCount = 0;
-		} 
+		}
 		var constr = "includes/images/" + jd.vars.imageList[jd.vars.rotateCount];
 		jd.vars.rotateCount += 1;
 		return constr;

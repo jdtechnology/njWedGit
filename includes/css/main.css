@@ -114,12 +114,15 @@ img#mainimg {
 	height: 300px;
 	width: 300px;
 	display: block;
-    margin: auto;
+  margin: auto;
 	opacity:1;
-	border: solid 1px black;
+	/* border: solid 1px black; */
 	-moz-box-shadow: 5px 5px 0px #999;
 	-webkit-box-shadow: 5px 5px 0px #999;
 	box-shadow: 5px 5px 0px #999;
+
+  border: 15px solid #3e2b14;
+  padding: 10px;
 }
 
 #head {
