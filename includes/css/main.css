@@ -611,3 +611,89 @@ background-color: #FF6600
 	right: 0;
 	z-index: 200;
 }
+
+/**BEGIN IMAGE LIST**/
+html {
+  font-family: 'Open Sans', Arial;
+}
+ul {
+  display: table;
+  padding: 3px 0 0 0;
+  width: 680px;
+}
+ul li {
+  list-style-type: none;
+  display: table-cell;
+  border-left: 1px solid #fff;
+   border-bottom: 1px solid #fff;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  margin-top: -3px;
+  width: 24.8%;
+  min-width: 158px;
+  max-width: 170px;
+}
+ul li img {
+  width: 100%;
+}
+ul li span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgba(0,0,0,0.7);
+  width: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 0;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+ul li:hover span {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 50% 0;
+}
+ul li h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 999px;
+  left: 0;
+  padding: 40% 2%;
+  text-align: center;
+  width: 96%;
+  -webkit-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+ul li:hover h2 {
+  top: 0;
+}
+ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+ul li.navigation div {
+  background: #ddd;
+  text-align: center;
+  padding: 39% 0;
+  font-size: 30px;
+}
+ul li.navigation .fa {
+  color: #aaa;
+  text-shadow: 1px 1px 1px #fff;
+}
+ul li.navigation a .fa {
+	color: #888;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+ul li.navigation a:hover .fa {
+  color: #78AB46;
+}

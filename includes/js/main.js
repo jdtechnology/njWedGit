@@ -190,7 +190,6 @@ var deadline = new Date(2018,3,21,15,0,0,0); //y,m,d,h,m,s,m
 //initializeClock('clockdiv', deadline);
 /**END**/
 
-
 var funcCalled = 0;
 (function () {
 	if (document.addEventListener) {
