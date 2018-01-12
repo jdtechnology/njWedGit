@@ -6,7 +6,11 @@ $conn = new mysqli(hostname, username, password, dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
+//We want to pass through useragent, and googleuserid to this...
+$ua = null;
+if(isSet($_SERVER['HTTP_USER_AGENT'])) {
+  $_SERVER['HTTP_USER_AGENT'];
+}
 $gStmt = $conn->prepare("INSERT INTO guests (fname, lname, email, attending, additional)
 	VALUES(?, ?, ?, ?, ?)");
 $gStmt->bind_param("sssis", $name1, $name2, $email, $attending_int, $additional);
