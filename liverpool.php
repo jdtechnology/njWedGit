@@ -40,7 +40,7 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
             <table id="livTable">
               <tr>
                 <td>
-                  <p>Anglican Cathederal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  <p><b>Anglican Cathederal</b></p>
                   <img src="includes/images/liverpool/cathederal_big.jpg">
                 </td>
                 <td>
@@ -54,12 +54,13 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
                      Part of Beatles’ folklore, there’s plenty for non-Fab Four fans to enjoy too. And of course, Cavern City Tours also runs the Magical Mystery Tour too.</p>
                 </td>
                 <td>
-                  <p>Cavern Club</p>
+                  <p><b>Cavern Club</b></p>
                   <img src="includes/images/liverpool/cavernclub_big.jpg">
                 </td>
               </tr>
               <tr>
                 <td>
+                  <p><b>Central Library</b></p>
                   <img src="includes/images/liverpool/centrallib_big.jpg">
                 </td>
                 <td>
@@ -73,11 +74,13 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
                   <br><br>Reds from all over the world can walk in the footsteps of their heroes, hear about the new development taking place and visit The Liverpool FC Story, Anfield’s interactive museum, plus its new exhibition: The Steven Gerrard Collection.</p>
                 </td>
                 <td>
+                  <p><b>Anfield</b></p>
                   <img src="includes/images/liverpool/anfield_big.jpg">
                 </td>
               </tr>
               <tr>
                 <td>
+                  <p><b>Chinatown</b></p>
                   <img src="includes/images/liverpool/chinatown_big.jpg">
                 </td>
                 <td>
@@ -92,11 +95,13 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
                   <br>Combined, the company’s drivers have more than 200 years’ experience navigating the streets of Liverpool in Black Cabs.</p>
                 </td>
                 <td>
+                  <p><b>Beatles cab tour</b></p>
                   <img src="includes/images/liverpool/cabtour_big.jpg">
                 </td>
               </tr>
               <tr>
                 <td>
+                  <p><b>Maritime museum<b></p>
                   <img src="includes/images/liverpool/citytour_big.jpg">
                 </td>
                 <td>
