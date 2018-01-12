@@ -35,8 +35,21 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
 						require("main_general.php");
 						echo "\n";
 					?>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum turpis vel diam finibus, vel vehicula ligula aliquet. Vivamus vel risus aliquet, scelerisque ipsum id, hendrerit diam. Sed cursus, est sed efficitur aliquet, eros lacus mollis ligula, ac finibus ante justo vel turpis. Aenean ac neque sapien. Nulla non luctus massa, eget fermentum lacus.</p>
-					<p>Sed quis odio nec risus pellentesque bibendum id eget augue. Donec egestas a eros nec bibendum. Aliquam facilisis mattis metus, a lacinia quam venenatis eu. Duis dolor turpis, dictum in nisl nec, pulvinar semper sem. Vivamus quis auctor magna. Suspendisse dignissim suscipit pulvinar. Maecenas rhoncus lobortis consequat. Nam lorem elit, consequat eget quam vitae, ullamcorper ullamcorper diam. Etiam vitae erat sed tellus consectetur cursus vitae eu tortor. Suspendisse id arcu quis diam efficitur vulputate. Praesent eget enim fringilla, lobortis lacus eu, viverra neque.</p>
+					<div id="ootdD">
+            <h1>Order of the day</h1>
+            <ul>
+              <li>3pm Wedding Ceremony</li>
+              <li>3.45pm Coaches arrive to take us to Oh Me Oh My</li>
+              <li>4pm Fizz and canapes</li>
+              <li>5pm Speeches</li>
+              <li>5:30pm Wedding Breakfast</li>
+              <li>8pm Party time!</li>
+              <li>8:30pm First dance</li>
+              <li>9:30pm Late Night Bites</li>
+              <li>12:45pm Last orders</li>
+              <li>1am Home time!</li>
+            </ul>
+
 				</div>
 			</td>
 		</tr>
