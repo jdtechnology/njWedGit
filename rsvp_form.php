@@ -2,15 +2,15 @@
 if(isset($_COOKIE['fname']) && isset($_COOKIE['lname']) && isset($_COOKIE["attending"])) {
 	if($_COOKIE["attending"] < 4) {
 ?>
-	<p><span class="required">9</span>Thank you for responding, <?php echo $_COOKIE['fname'] . " " . $_COOKIE['lname']; ?>!</p><br>
-	<p>We really look forward to seeing you on the day! Don't forget to check out the location, or the wedding list</p>
+	<p>Thank you for responding, <?php echo $_COOKIE['fname'] . " " . $_COOKIE['lname']; ?>!</p><br>
+	<p>We really look forward to seeing you on the day! Don't forget to check out the <a href="information">location</a>, or the <a href="registry">registry</a></p>
 <?php
-	} elseif($_COOKIE["attending"] > 4) {
+} elseif($_COOKIE["attending"] >= 4) {
 
 ?>
 
-	<p><span class="required">10</span>Thank you for responding, <?php echo $_COOKIE['fname'] . " " . $_COOKIE['lname']; ?>!</p><br>
-	<p>We are really sad that you wont be coming, but you can still see our gift list if you'd like.</p>
+	<p>Thank you for responding, <?php echo $_COOKIE['fname'] . " " . $_COOKIE['lname']; ?>!</p><br>
+	<p>We are really sad that you won't be coming, but you can still see our <a href="registry">registry</a> if you'd like.</p>
 <?php
 	}
 } else {

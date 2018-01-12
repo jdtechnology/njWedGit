@@ -7,16 +7,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 //We want to pass through useragent, and googleuserid to this...
-$ua = null;
-if(isSet($_SERVER['HTTP_USER_AGENT'])) {
-  $_SERVER['HTTP_USER_AGENT'];
-}
-$gStmt = $conn->prepare("INSERT INTO guests (fname, lname, email, attending, additional)
-	VALUES(?, ?, ?, ?, ?)");
-$gStmt->bind_param("sssis", $name1, $name2, $email, $attending_int, $additional);
-$gStmtExtra = $conn->prepare("INSERT INTO guests (fname, lname, email, attending, additional, gfname, glname)
-	VALUES(?, ?, ?, ?, ?, ?, ?)");
-$gStmtExtra->bind_param("sssisss", $name1, $name2, $email, $attending_int, $additional, $gname1, $gname2);
+$gStmt = $conn->prepare("INSERT INTO guests (fname, lname, email, attending, additional, useragent)
+	VALUES(?, ?, ?, ?, ?, ?)");
+$gStmt->bind_param("sssiss", $name1, $name2, $email, $attending_int, $additional, $ua);
+$gStmtExtra = $conn->prepare("INSERT INTO guests (fname, lname, email, attending, additional, gfname, glname, useragent)
+	VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
+$gStmtExtra->bind_param("sssissss", $name1, $name2, $email, $attending_int, $additional, $gname1, $gname2, $ua);
 
 //$conn->real_escape_string
 $name1 = $_POST["firstname"];
@@ -30,6 +26,13 @@ $additional = $_POST["additional"];
 $additional = $conn->real_escape_string($additional);
 $attending_int = 8;
 $success = false;
+
+//We want to pass through useragent, and googleuserid to this...
+$ua = null;
+if(isSet($_SERVER['HTTP_USER_AGENT'])) {
+  $ua = $_SERVER['HTTP_USER_AGENT'];
+}
+$ua = $conn->real_escape_string($ua);
 
 if(isset($_POST["gfirstname"])) {
 	$g1 = true;

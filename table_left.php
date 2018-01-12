@@ -54,7 +54,8 @@ if($page_ref == "home_page") {
 				<div id="leftContent">
 					<!--RSVP-->
 					<div id="microsoft_placehold1"></div>
-					<p><span class="required">14</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id ante a magna ultricies sodales.</p>
+					<p>If you're having any problems, please email:
+					<a href="mailto:jd@natalieandjameswedding.co.uk">jd@natalieandjameswedding.co.uk</a></p>
 					<div id="microsoft_placehold2"></div>
 				</div>
 			</td>

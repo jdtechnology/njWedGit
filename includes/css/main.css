@@ -169,6 +169,7 @@ a:hover {
 	position: relative;
 	margin: 50px auto 0 auto; /*top, bottom, hight, width?!*/
 	padding: 0 60px 30px 60px;
+	vertical-align: middle
 }
 #tabLeft {
 	padding: 0 60px 30px 60px;
