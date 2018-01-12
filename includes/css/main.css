@@ -19,6 +19,8 @@ h1, p, .cent {
 }
 h1 {
 	font: bold;
+	filter: brightness(55%);
+
 }
 p {
 	opacity: 1;
@@ -28,6 +30,10 @@ p {
 	text-align: center;
 }
 .carpark {
+	color: rgb(159,184,205);
+	filter: brightness(55%);
+}
+.oodt {
 	color: rgb(159,184,205);
 	filter: brightness(55%);
 }

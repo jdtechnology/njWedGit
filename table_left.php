@@ -76,7 +76,7 @@ if($page_ref == "home_page") {
 				<div id="leftContent">
 					<!--OTHER-->
 					<div id="microsoft_placehold1"></div>
-					<p><span class="required">51</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id ante a magna ultricies sodales.</p>
+					<p>Order of the day</p>
 					<div id="microsoft_placehold2"></div>
 				</div>
 			</td>
@@ -92,7 +92,15 @@ if($page_ref == "home_page") {
 						</div>
 					</td>
 <?php
+} elseif($page_ref == "liverpool_page") {
+?>
+	<!--NOTHING TO SHOW, LIVERPOOL PAGE... HI FROM JACK!-->
+<?php
+} elseif($page_ref == "hotels_page") {
+?>
+	<!--NOTHING TO SHOW, HOTEL PAGE... HI FROM JACK!-->
+<?php
 } else {
-	echo "FAILURE";
+	echo "<!--THERE IS AN ERROR WITH PAGEVAR, please check page name, and come back-->";
 }
 ?>

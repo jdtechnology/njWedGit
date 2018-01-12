@@ -36,8 +36,8 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
 						echo "\n";
 					?>
 					<div id="ootdD">
-            <h1>Order of the day</h1>
-            <ul>
+            <p><h1>Order of the day</h1></p>
+            <ul class="carpark">
               <li>3pm Wedding Ceremony</li>
               <li>3.45pm Coaches arrive to take us to Oh Me Oh My</li>
               <li>4pm Fizz and canapes</li>

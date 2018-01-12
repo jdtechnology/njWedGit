@@ -35,13 +35,8 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
 						require("main_general.php");
 						echo "\n";
 					?>
-					<!-- <p><span class="required">1</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum turpis vel diam finibus, vel vehicula ligula aliquet. Vivamus vel risus aliquet, scelerisque ipsum id, hendrerit diam. Sed cursus, est sed efficitur aliquet, eros lacus mollis ligula, ac finibus ante justo vel turpis. Aenean ac neque sapien. Nulla non luctus massa, eget fermentum lacus.</p> -->
-          <br>
-          <br>
-          <br>
-					<img class="central" id="mainimg" src="includes/images/home_1.jpeg" alt="Loading..."><!--Convert to png for continuity-->
-					<p><!--<span class="required">2</span>-->Welcome to our wedding website! We hope you find this information helpful as you plan your trip to Liverpool. We are so excited to celebrate our big day with all of you!</p>
-				</div>
+          <h1>Here are some hotel suggestion (tripadvisor)</h1>
+					<iframe src="https://www.tripadvisor.co.uk/Hotels-g186337-Liverpool_Merseyside_England-Hotels.html" width="100%" height="900px">
 			</td>
 		</tr>
 	</table>

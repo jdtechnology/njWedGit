@@ -2,12 +2,12 @@
 <div class="1container" id="head">
 	<table id="contextmen">
 		<tr>
-			<th><a class="ajax-nav" href="index"><img src="includes/images/bg-icon.png" style="height:45px"></a></th>
-			<th><a class="ajax-nav" href="index">Natalie & <br>James's wedding</a></th>
+			<th><a class="ajax-nav" href="home"><img src="includes/images/bg-icon.png" style="height:45px"></a></th>
+			<th><a class="ajax-nav" href="home">Natalie & <br>James's wedding</a></th>
 			<th><a class="ajax-nav" href="ootd">Order of the Day</a></th>
 			<th>
 				<!--<div class="dropdown">-->
-				<a class="dropme ajax-nav" id="dropdown" href="information">Information</a>
+				<a class="dropme ajax-nav" id="dropdown" href="#whyDidYouClickMe">Information</a>
 					  <div id="myDropdown" class="dropdown-content">
 						<a class="ajax-nav" href="day">Ceremony (Daytime)</a>
 						<a class="ajax-nav" href="night">Reception (Nighttime)</a>
