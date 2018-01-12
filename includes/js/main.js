@@ -11,7 +11,7 @@ jd.vars = {
 	rotateInterval: 0,
 	rotateCount: 1,
 	rsvpError: false,
-	imageList: ["home_1.jpeg", "home_2.jpg", "home_4.jpg", "home_5.jpg"]
+	imageList: ["home_1.jpeg", "home_2.jpg", "home_3.jpg", "home_4.jpg", "home_5.jpg"]
 };
 
 jd.temp = {

@@ -1,5 +1,5 @@
 <div id="foot">
-	<p>Copyright Jack Fisher 2017 &copy;</p>
+	<p>Copyright <a href="https://github.com/jdtechnology/njWedGit">Jack Fisher</a> 2018 &copy;</p>
 </div>
 <div id="footContact">
 	<h6>email: enquire@natalieandjameswedding.co.uk<br>
