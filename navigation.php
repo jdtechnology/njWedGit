@@ -21,6 +21,6 @@
 		</tr>
 	</table>
 </div>
-<br><br><br>
+<br><br><br><br><br><br><br>
 <!--No more beta message
 <div id="beta_message">This site is in a public beta... Please contact the <a href="mailto:admin@natalieandjameswedding.co.uk">admin@natalieandjameswedding.co.uk</a> if you notice an error</div>-->
