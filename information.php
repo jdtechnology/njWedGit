@@ -35,9 +35,7 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
 						require("main_general.php");
 						echo "\n";
 					?>
-					<p><span class="required">3</span>Text to link to day time location <a class="ajax-nav" href="day.php">Daytime location link</a></p>
-					<!--Update maps iframe to my style of embed.-->
-					<p><span class="required">4</span>Text to link to night time location <a class="ajax-nav" href="day.php">Night time location link</a></p>
+					<!--Links to all "location" pages-->
 				</div>
 			</td>
 		</tr>
