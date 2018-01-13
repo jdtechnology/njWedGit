@@ -35,7 +35,6 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
 						require("main_general.php");
 						echo "\n";
 					?>
-					<!-- <p><span class="required">1</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vestibulum turpis vel diam finibus, vel vehicula ligula aliquet. Vivamus vel risus aliquet, scelerisque ipsum id, hendrerit diam. Sed cursus, est sed efficitur aliquet, eros lacus mollis ligula, ac finibus ante justo vel turpis. Aenean ac neque sapien. Nulla non luctus massa, eget fermentum lacus.</p> -->
           <br>
           <br>
           <br>

@@ -124,7 +124,7 @@ jd.cookies = { //To DO
 
 jd.init = function() { //Modify to rediect to "app"
 	if(getDeviceType() > 1) {
-		window.location = "/natalie/App/0.0.1/";
+		window.location = "app/";
 	}
 	document.getElementById("dropdown").addEventListener("mouseover", jd.funcs.dropdownMenu);
 	document.getElementById("shareImg").addEventListener("mouseover", jd.funcs.slideOut);
