@@ -38,7 +38,7 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
           <br>
           <br>
           <br>
-					<img class="central" id="mainimg" src="includes/images/home_1.jpeg" alt="Loading..."><!--Convert to png for continuity-->
+					<img class="central" id="mainimg" src="includes/images/home_1.JPG" alt="Loading..."><!--Convert to png for continuity-->
 					<p><!--<span class="required">2</span>-->Welcome to our wedding website! We hope you find this information helpful as you plan your trip to Liverpool. We are so excited to celebrate our big day with all of you!</p>
 				</div>
 			</td>
