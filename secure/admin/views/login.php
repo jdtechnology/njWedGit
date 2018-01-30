@@ -6,7 +6,7 @@ require_once('login_check.php');
 
 // otherwise, wtf?
 if (isset($current_user) && isset($current_user['loggedin']) && $current_user['loggedin'] == true) {
-	header('Location: protected.php');
+	header('Location: dbview.php');
 	die();
 }
 

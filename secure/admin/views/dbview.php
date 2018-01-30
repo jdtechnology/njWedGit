@@ -42,10 +42,22 @@ var tableToExcel = (function () {
 
         }
     })()
+var sanitiseAttends = function() {
+  var $ = document.getElementsByClassName("attends");
+  for(i = 0; i < $.length; i++) {
+    if($[i].innerHTML == 3) {
+      $[i].innerHTML = "Yes";
+    } else if ($[i].innerHTML == 4) {
+      $[i].innerHTML = "No";
+    } else {
+      return 0;
+    }
+  }
+}
 </script>
 </head>
 
-<body>
+<body onload="sanitiseAttends()">
   <div id="dbView">
     <div id="dbExelExport">
     <table border='1'>
@@ -73,7 +85,7 @@ function displayTable($res) {
       echo "<td>" . $row['fname'] . "</td>";
       echo "<td>" . $row['lname'] . "</td>";
       echo "<td>" . $row['email'] . "</td>";
-      echo "<td>" . $row['attending'] . "</td>";
+      echo "<td class=\"attends\">" . $row['attending'] . "</td>";
       echo "<td>" . $row['additional'] . "</td>";
       echo "<td>" . $row['gfname'] . "</td>";
       echo "<td>" . $row['glname'] . "</td>";

@@ -49,7 +49,6 @@ if ($check_for_email->num_rows > 0) {
 $pwd_salt = substr(get_key(256), 0, 22); // make a new 22-character salt
 $new_user_pwd_hash = crypt(trim($_POST['p1']), '$2y$12$' . $pwd_salt);
 $new_user_pwd_hash_db = "'".$mysqli->escape_string($new_user_pwd_hash)."'";
-
 $new_user_row = $mysqli->query("INSERT INTO users (email, pwrdlol, tsc) VALUES ($new_user_email_db, $new_user_pwd_hash_db, UNIX_TIMESTAMP())");
 if (!$new_user_row) {
 	die('error creating new user: '.$mysqli->error);

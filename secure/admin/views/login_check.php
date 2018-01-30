@@ -129,7 +129,7 @@ if (isset($_COOKIE['admin_session']) && trim($_COOKIE['admin_session']) != '') {
 		$new_session_row = $mysqli->query("INSERT INTO user_sessions (session_key, session_secret, user_id, expires, ts) VALUES ($new_session_key_db, $new_session_secret_hash_db, $current_user_id, $new_session_key_expires, UNIX_TIMESTAMP())");
 
 		// logged in, cool
-		header('Location: protected.php');
+		header('Location: dbview.php');
 		die();
 	} else {
 		if (!$has_flood_control_limit) {
