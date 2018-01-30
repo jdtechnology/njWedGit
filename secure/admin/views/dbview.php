@@ -1,4 +1,6 @@
 <?php
+$login_required = true;
+require_once('login_check.php');
 require("../../../../config.php");
 // Create connection
 $conn = new mysqli(hostname, username, password, dbname);
@@ -110,7 +112,7 @@ displayTable($result);
     <button class="fbutton" onclick="javascript:location.reload(true)">Refresh</button>
     <a id="dlink"  style="display:none;"></a>
 
-    <input type="button" onclick="tableToExcel('dbExelExport', 'RSVPS', 'weddingrsvps.xls')" value="Export to Excel">
+    <input class="fbutton" type="button" onclick="tableToExcel('dbExelExport', 'RSVPS', 'weddingrsvps.xls')" value="Export to Excel">
   </div>
   <div id="dbStats">
     <table border="1">
