@@ -62,6 +62,7 @@ var sanitiseAttends = function() {
     <div id="dbExelExport">
     <table border='1'>
       <tr>
+        <th>Sel</th>
         <th>ID</th>
         <th>Firstname</th>
         <th>Lastname</th>
@@ -73,25 +74,26 @@ var sanitiseAttends = function() {
         <th>Date rsvp</th>
         <th>userAgent</th>
       </tr>
-
+<form id="delGuest" action="delete_guest.php" method="post">
 <?php
 $result = mysqli_query($conn, "SELECT * FROM guests");
 function displayTable($res) {
 
 
     while($row = mysqli_fetch_array($res)) {
-      echo "<tr>";
-      echo "<td>" . $row['id'] . "</td>";
-      echo "<td>" . $row['fname'] . "</td>";
-      echo "<td>" . $row['lname'] . "</td>";
-      echo "<td>" . $row['email'] . "</td>";
-      echo "<td class=\"attends\">" . $row['attending'] . "</td>";
-      echo "<td>" . $row['additional'] . "</td>";
-      echo "<td>" . $row['gfname'] . "</td>";
-      echo "<td>" . $row['glname'] . "</td>";
-      echo "<td>" . $row['datersvpd'] . "</td>";
-      echo "<td>" . $row['useragent'] . "</td>";
-      echo "</tr>";
+      echo "<tr>\n";
+      echo "<td><input type=\"checkbox\" name=\"uid[]\" value=\"" . $row['id'] . "\" /></td>\n";
+      echo "<td>" . $row['id'] . "</td>\n";
+      echo "<td>" . $row['fname'] . "</td>\n";
+      echo "<td>" . $row['lname'] . "</td>\n";
+      echo "<td>" . $row['email'] . "</td>\n";
+      echo "<td class=\"attends\">" . $row['attending'] . "</td>\n";
+      echo "<td>" . $row['additional'] . "</td>\n";
+      echo "<td>" . $row['gfname'] . "</td>\n";
+      echo "<td>" . $row['glname'] . "</td>\n";
+      echo "<td>" . $row['datersvpd'] . "</td>\n";
+      echo "<td>" . $row['useragent'] . "</td>\n";
+      echo "</tr>\n";
     }
     // echo "</table>";
 
@@ -99,14 +101,16 @@ function displayTable($res) {
 displayTable($result);
 // mysqli_close($conn);
 ?>
+</form>
 </div>
   <tr>
     <form action="success.php" method="post">
+    <td>-</td>
     <td>x</td>
     <td><input type="text" name="firstname" /></td>
     <td><input type="text" name="lastname" /></td>
     <td><input type="text" name="email" /></td>
-    <td><input type="text" name="attending" /></td>
+    <td><input type="text" name="attending" placeholder="y/n (must be lower case)"/></td>
     <td><input type="text" name="additional" /></td>
     <td><input type="text" name="gfirstname" /></td>
     <td><input type="text" name="glastname" /></td>
@@ -125,6 +129,9 @@ displayTable($result);
     <a id="dlink"  style="display:none;"></a>
 
     <input class="fbutton" type="button" onclick="tableToExcel('dbExelExport', 'RSVPS', 'weddingrsvps.xls')" value="Export to Excel">
+
+    <button class="fbutton" onclick="document.forms.delGuest.submit()">Delete Selected</button>
+
   </div>
   <div id="dbStats">
     <table border="1">
