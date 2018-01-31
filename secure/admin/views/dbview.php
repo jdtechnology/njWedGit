@@ -2,13 +2,13 @@
 $login_required = true;
 require_once('login_check.php');
 require("../../../../config.php");
+require_once("uaparser.php");
 // Create connection
 $conn = new mysqli(hostname, username, password, dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
 ?>
 <!doctype html>
 <html>
@@ -150,12 +150,22 @@ $resYes = $resYes->num_rows;
 $resNo = mysqli_query($conn, "SELECT * FROM guests WHERE attending = 4");
 $resNo = $resNo->num_rows;
 
+$resPop = mysqli_query($conn,"SELECT useragent, COUNT(*) AS magnitude
+                        FROM guests
+                        GROUP BY useragent
+                        ORDER BY magnitude DESC
+                        LIMIT 1");
+
 mysqli_close($conn);
+
+$uas = $resPop->fetch_array()[0];
+$parray = parse_user_agent($uas);
+$pretyUAS = $parray["browser"] . " on ". $parray["platform"];
 ?>
     <tr>
       <td><?php echo $resTotal; ?></td>
       <td><?php echo $resYes; ?></td>
       <td><?php echo $resNo; ?></td>
-      <td>DUMMY</td>
+      <td><?php echo $pretyUAS; ?></td>
     </tr>
   </table>
