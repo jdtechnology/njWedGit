@@ -84,8 +84,8 @@ $gStmtExtra->close();
 $conn->close();
 
 if($success) {
-	header('Location: dbview.php?=s=1');
+	header('Location: dbview.php?added=1');
 } else {
-	header('Location: dbview.php?=s=0');
+	header('Location: dbview.php?added=0');
 }
 ?>

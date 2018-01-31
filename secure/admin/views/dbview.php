@@ -9,6 +9,21 @@ $conn = new mysqli(hostname, username, password, dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+if(isSet($_GET["added"])) {
+  if($_GET["added"] == 1) {
+    echo "That guest should now appear at the bottom of the database!";
+  } else {
+    echo "Something is wrong, call Jack :)";
+  }
+}
+if(isSet($_GET["deleted"])) {
+  if($_GET["deleted"] == 1) {
+    echo "That guest/Those guests are now deleted, this is permenant. If it was an accident please contact Jack.";
+  } else {
+    echo "Something is wrong, call Jack :)";
+  }
+}
 ?>
 <!doctype html>
 <html>
@@ -52,6 +67,11 @@ var sanitiseAttends = function() {
     } else {
       return 0;
     }
+  }
+}
+var confirmDelete = function() {
+  if(confirm("Are you sure?\nThis is permenant")) {
+    document.forms.delGuest.submit();
   }
 }
 </script>
@@ -130,7 +150,7 @@ displayTable($result);
 
     <input class="fbutton" type="button" onclick="tableToExcel('dbExelExport', 'RSVPS', 'weddingrsvps.xls')" value="Export to Excel">
 
-    <button class="fbutton" onclick="document.forms.delGuest.submit()">Delete Selected</button>
+    <button class="fbutton" onclick="confirmDelete()">Delete Selected</button>
 
   </div>
   <div id="dbStats">
