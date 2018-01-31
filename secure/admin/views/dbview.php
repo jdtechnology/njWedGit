@@ -74,6 +74,11 @@ var confirmDelete = function() {
     document.forms.delGuest.submit();
   }
 }
+var refreshPage = function() {
+  location.search = location.search.replace(/added=[^&$]*|deleted=[^&$]*/i, '');
+  //location.href = location.origin + location.pathname;
+  //location.reload(true);
+}
 </script>
 </head>
 
@@ -145,7 +150,7 @@ displayTable($result);
     <br><br>
       <input class="fbutton" type="submit" value="Add Guest Manually" />
     </form>
-    <button class="fbutton" onclick="javascript:location.reload(true)">Refresh</button>
+    <button class="fbutton" onclick="refreshPage()">Refresh</button>
     <a id="dlink"  style="display:none;"></a>
 
     <input class="fbutton" type="button" onclick="tableToExcel('dbExelExport', 'RSVPS', 'weddingrsvps.xls')" value="Export to Excel">
