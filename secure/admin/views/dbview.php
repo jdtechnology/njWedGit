@@ -12,16 +12,16 @@ if ($conn->connect_error) {
 
 if(isSet($_GET["added"])) {
   if($_GET["added"] == 1) {
-    echo "That guest should now appear at the bottom of the database!";
+    echo "<span style=\"background-color: #32CD32\">That guest should now appear at the bottom of the database!<span>\n";
   } else {
-    echo "Something is wrong, call Jack :)";
+    echo "<span style=\"background-color: #FF0000\">Something is wrong, call Jack :)</span>";
   }
 }
 if(isSet($_GET["deleted"])) {
   if($_GET["deleted"] == 1) {
-    echo "That guest/Those guests are now deleted, this is permenant. If it was an accident please contact Jack.";
+    echo "<span style=\"background-color: #32CD32\">That guest/Those guests are now deleted, this is permenant. If it was an accident please contact Jack.</span>";
   } else {
-    echo "Something is wrong, call Jack :)";
+    echo "<span style=\"background-color: #FF0000\">Something is wrong, call Jack :)</span>";
   }
 }
 ?>
