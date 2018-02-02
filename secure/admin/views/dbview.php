@@ -79,6 +79,34 @@ var refreshPage = function() {
   //location.href = location.origin + location.pathname;
   //location.reload(true);
 }
+var hideShowNo = function() {
+  var $ = document.getElementsByClassName("attends");
+  for(i = 0; i < $.length; i++) {
+    if($[i].innerHTML == "No") {
+      if(document.getElementById("row" + i.toString()).style.display == 'none') {
+        document.getElementById("row" + i.toString()).style.display = '';
+        document.getElementById("hsNo").innerHTML = "Hide No(s)"
+      } else {
+        document.getElementById("row" + i.toString()).style.display = 'none';
+        document.getElementById("hsNo").innerHTML = "Show No(s)"
+      }
+    }
+  }
+}
+var hideShowYes = function() {
+  var $ = document.getElementsByClassName("attends");
+  for(i = 0; i < $.length; i++) {
+    if($[i].innerHTML == "Yes") {
+      if(document.getElementById("row" + i.toString()).style.display == 'none') {
+        document.getElementById("row" + i.toString()).style.display = '';
+        document.getElementById("hsYes").innerHTML = "Hide Yes(s)"
+      } else {
+        document.getElementById("row" + i.toString()).style.display = 'none';
+        document.getElementById("hsYes").innerHTML = "Show Yes(s)"
+      }
+    }
+  }
+}
 </script>
 </head>
 
@@ -104,9 +132,9 @@ var refreshPage = function() {
 $result = mysqli_query($conn, "SELECT * FROM guests");
 function displayTable($res) {
 
-
+    $i = 0;
     while($row = mysqli_fetch_array($res)) {
-      echo "<tr>\n";
+      echo "<tr id=\"row" . $i . "\">\n";
       echo "<td><input type=\"checkbox\" name=\"uid[]\" value=\"" . $row['id'] . "\" /></td>\n";
       echo "<td>" . $row['id'] . "</td>\n";
       echo "<td>" . $row['fname'] . "</td>\n";
@@ -119,6 +147,7 @@ function displayTable($res) {
       echo "<td>" . $row['datersvpd'] . "</td>\n";
       echo "<td>" . $row['useragent'] . "</td>\n";
       echo "</tr>\n";
+      $i++;
     }
     // echo "</table>";
 
@@ -156,6 +185,9 @@ displayTable($result);
     <input class="fbutton" type="button" onclick="tableToExcel('dbExelExport', 'RSVPS', 'weddingrsvps.xls')" value="Export to Excel">
 
     <button class="fbutton" onclick="confirmDelete()">Delete Selected</button>
+
+    <button id="hsNo" class="fbutton" onclick="hideShowNo()">Hide No(s)</button>
+    <button id="hsYes" class="fbutton" onclick="hideShowYes()">Hide Yes(s)</button>
 
   </div>
   <div id="dbStats">
