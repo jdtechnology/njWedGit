@@ -45,7 +45,7 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
             <table id="codeAndCopy">
               <tr>
             <td><code id="codeForJL">729200</code></td>
-            <td><button id="copyButt" title="Copy code to clipboard"><img id="cCodeToClip" src="https://deb5pi665ie8w.cloudfront.net/generic/kez.icon-clipboard.png" /></button><td>
+            <td><button id="copyButt" title="Copy code to clipboard"><img id="cCodeToClip" src="includes/images/icon-clipboard.png" /></button><td>
             </tr>
           </table>
             <!-- <button id="cCodeToClip"></button> -->
