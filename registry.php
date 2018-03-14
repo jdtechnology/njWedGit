@@ -17,6 +17,7 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
 </head>
 
 <body>
+<input type="text" value="729200" id="codeInput">
 <?php require("navigation.php"); ?>
 
 <div id="ajax-content">
@@ -30,16 +31,28 @@ if (isset($_GET["view_as"]) && $_GET["view_as"] == "json") {
 			?>
 
 			<td id="tabRight">
-				<div class="container" id="main">
-					<?php
-						require("main_general.php");
-						echo "\n";
-					?>
-					<p>Whilst your attendance at our wedding is all we ask, should you wish to bring a gift we kindly direct you to our gift list
+        <div class="container" id="main">
+          <?php
+            require("main_general.php");
+            echo "\n";
+          ?>
+          <p>Whilst your attendance at our wedding is all we ask, should you wish to bring a gift we kindly direct you to our gift list...
           </p>
-					<p>Our Gift list will open on 10th March 2018. You will then be able to use it by calling 0345 600 2202, visiting johnlewis.com or any John Lewis store.
+          <p>You can now view our giftlist by visiting
+            <a class="container" href="https://www.johnlewisgiftlist.com/giftint/JSPs/GiftList/BuyGifts/GuestFindAList.jsp" target="_blank">JohnLewis/GiftLists</a>
+            <br><br>and entering our code:
+            <br>
+            <table id="codeAndCopy">
+              <tr>
+            <td><code id="codeForJL">729200</code></td>
+            <td><button id="copyButt" title="Copy code to clipboard"><img id="cCodeToClip" src="includes/images/icon-clipboard.png" /></button><td>
+            </tr>
+          </table>
+            <!-- <button id="cCodeToClip"></button> -->
           </p>
-				</div>
+          <!--Do cookie stuff-->
+          <p>Thanks again, we look forward to seeing you!</p>
+        </div>
 			</td>
 		</tr>
 	</table>

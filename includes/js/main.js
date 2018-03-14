@@ -116,6 +116,12 @@ jd.funcs = {
 				}
 			}
 		};
+	},
+	copyCodeToCB: function() {
+		var txt = document.getElementById("codeInput");
+		txt.select();
+		document.execCommand("Copy");
+		document.getElementById("copyButt").classList.toggle("copyClicked");
 	}
 };
 
@@ -142,6 +148,9 @@ jd.init = function() { //Modify to rediect to "app"
 	}
 	if(document.getElementById("mainimg") !== null) {
 		setInterval(jd.funcs.imageRotate, 3000);
+	}
+	if(document.getElementById("codeForJL") !== null) {
+		document.getElementById("copyButt").addEventListener("click", jd.funcs.copyCodeToCB)
 	}
 	initializeClock('clockdiv', deadline);
 };
